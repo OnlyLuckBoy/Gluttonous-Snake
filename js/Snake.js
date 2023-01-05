@@ -41,7 +41,6 @@ Snake.prototype.move = function(){
     this.arr.unshift(item);
     // 删除尾部
     this.arr.pop();
-    console.log(this.arr[this.arr.length-1])
 
     // 确定尾部图片的方向
     // 获取倒数第二个成员
