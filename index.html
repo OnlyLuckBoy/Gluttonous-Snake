@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>贪吃蛇</title>
+</head>
+<body>
+    <script src="./js/Block.js"></script>
+    <script src="./js/Food.js"></script>
+    <script src="./js/Game.js"></script>
+    <script src="./js/Map.js"></script>
+    <script src="./js/Snake.js"></script>
+    <script>
+        // 实例化各个类
+        var block = new Block('https://user-images.githubusercontent.com/118160705/210689678-45b1c69e-ce40-4427-9dc7-78a5eaeea4db.png');
+        var food = new Food(14,16,'https://user-images.githubusercontent.com/118160705/210689695-9977a045-896f-4176-8979-d6c11c64f166.png');
+        var map = new Map(20,20,600,600);
+        var snake = new Snake({
+            head : 'https://user-images.githubusercontent.com/118160705/210689749-fc17bb03-2dfc-4523-8cc8-90f2706405ac.png',
+            body : 'https://user-images.githubusercontent.com/118160705/210689710-f4e04530-d320-4535-8acd-5df057322dba.png',
+            tail : 'https://user-images.githubusercontent.com/118160705/210689743-141c9fab-1e85-448e-997b-9227e0697448.png'
+        });
+        // 将四个属性传个Game类
+        var game = new Game(snake,map,food,block);
+    </script>
+</body>
+</html>
